@@ -1,0 +1,118 @@
+*, ::after, ::before{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+@keyframes bounceOut {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% { 
+    transform: scale(1);
+  }
+}
+body { 
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #397FAF;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1vw;
+  animation: bounceOut 1s ;
+}
+
+.header {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFF;
+}
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.section {
+  width: 100%;
+  height: 75%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.article {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.title  {
+  text-align: center;
+  font-weight: bold;
+  color: #FFF;
+  font-size: 9.2vw;
+}
+.description {
+  text-align: center;
+  font-weight: bold;
+  color: #FFF;
+  font-size: 2.3vw;
+}
+.form {
+  width: 75%;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+
+}
+.nom {
+  width: 25%;
+  height: 50%;
+  border-radius: 124px;
+  font-size: 1.3vw;
+  padding-left: 2%;
+}
+.email {
+  width: 45%;
+  height: 50%;
+  border-radius: 124px;
+  font-size: 1.3vw;
+  padding-left: 2%;
+}
+.btn {
+  width: 25%;
+  height: 50%;
+  border-radius: 124px;
+  font-size: 1.3vw;
+  background-color: #000;
+  color: #FFF;
+  transition: all 1s;
+}
+.btn:hover {
+  transform: scale(1.05);
+  background-color: #FFF;
+  color: #000;
+}
