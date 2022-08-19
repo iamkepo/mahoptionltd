@@ -9,8 +9,21 @@ const send = () => {
       return;
     }
   }
-  alert(JSON.stringify(data))
-  //alert("Désolé votre message ne peut être envoyer actuellement")
+  axios({
+    method: "post",
+    url: 'https://zappe.herokuapp.com/api/public/stock/post', 
+    data: {
+      data: data,
+      table: "mails"
+    }})
+  .then((response) => {
+    alert(response.data.message);
+  })
+  .catch((err) => {
+    alert("Erreur de connexion");
+  });
+  document.querySelector(".nom").value = "";
+  document.querySelector(".email").value = "";
 }
 document.querySelector(".btn").onclick = function (event) {
   event.preventDefault();

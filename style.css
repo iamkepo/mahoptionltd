@@ -112,7 +112,7 @@ body {
   transition: all 1s;
 }
 .btn:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   background-color: #FFF;
   color: #000;
 }
